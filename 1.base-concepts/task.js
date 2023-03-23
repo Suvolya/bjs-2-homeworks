@@ -5,15 +5,12 @@ function solveEquation(a, b, c) {
   console.log('d = ' + d);
 
   if (d < 0)
-        return false;
+       arr = [];
 
-  if (d == 0)
-        arr['square root'] = -b/(2*a);
-  else if (d > 0) {
-      let tmp = [];
-      tmp.push((-b + Math.sqrt(d) )/(2*a));
-      tmp.push((-b - Math.sqrt(d) )/(2*a));
-      arr['square root'] = tmp;
+  else if (d === 0)
+        arr = [-b/(2*a)];
+  else {
+      arr = [(-b + Math.sqrt(d) ) / (2 * a), (-b - Math.sqrt(d) ) / (2 * a)];
   }
   return arr;
 }
@@ -21,11 +18,22 @@ console.log(solveEquation(1, 5, 4));
 console.log(solveEquation(1, 2, 1));
 console.log(solveEquation(1, 2, 10));
 
+
 function calculateMortgage() {
   let percent = window.getElementById("percent").value;
   let contribution = window.getElementById("contribution").value;
   let amount = window.getElementById("amount").value;
   let countMonths = window.getElementById("countMonths").value;
+
+  if
+  isNaN("percent");
+  isNaN("contribution");
+  isNaN("amount");
+  isNaN("countMonths");
+  else {
+    return false;
+  }
+
   
 
   let result = calculateTotalMortgage(percent, contribution, amount, countMonths);
