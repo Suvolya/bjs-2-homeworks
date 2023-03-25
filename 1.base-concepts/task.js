@@ -44,19 +44,19 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (percent > 0) {
     percent = +percent;
   } else if (percent != 0 || percent == 0) {
-    return `“Параметр "Процентная ставка" содержит неправильное значение ${percent}”.`;
+    return `“Параметр "Процентная ставка" содержит неправильное значение”.`;
   }
 
   if (contribution >= 0) {
     contribution = +contribution;
   } else if (contribution != 0) {
-    return `“Параметр "Первоночальный взнос" содержит неправильное значение ${contribution}”.`;
+    return `“Параметр "Первоночальный взнос" содержит неправильное значение”.`;
   }
 
   if (amount >= 0) {
     amount = +amount;
   } else if (amount != 0) {
-    return `“Параметр "Общая сумма" содержит неправильное значение ${amount}”.`;
+    return `“Параметр "Общая сумма" содержит неправильное значение”.`;
   }
 
   // Расчет количества месяцев, на которые оформляется ипотека.
