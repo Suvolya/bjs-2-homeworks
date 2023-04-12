@@ -5,13 +5,13 @@ function Student(name, gender, age) {
     this.marks = [];
   
   
-    Student.prototype.setSubject = function (subjectName) {
+    Student.prototype.setSubject = function(subjectName) {
     this.subject = subjectName;
     };
   
     Student.prototype.addMarks = function(...marksToAdd) {
       if (!this.marks){
-        Consol.log("Ошибка: студент отчислен")
+        console.log("Ошибка: студент отчислен")
           return;   
       } 
           this.marks.push(...marksToAdd);
