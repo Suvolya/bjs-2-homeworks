@@ -37,16 +37,17 @@ function debounceDecoratorNew(func, delay) {
   
     function wrapper(...args) {
       if (timeoutId) clearTimeout(timeoutId);
-      if (!wrapper.count) wrapper.count = 0;
-      if (!wrapper.allCount) wrapper.allCount = 0;
+      wrapper.allCount++;
   
       if (!hasCalled) {
         doIt(args);
       } else {
-        wrapper.allCount++;
+        
         timeoutId = setTimeout(() => doIt(args), delay);
       }
     }
+    wrapper.count = 0;
+    wrapper.allCount = 0;
     return wrapper;
   }
   
